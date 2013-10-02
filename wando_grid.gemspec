@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'wando_grid'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2013-07-15'
   s.summary     = "extjs4 grid"
   s.description = "organize a extjs grid that you can load data from rails"

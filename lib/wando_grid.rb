@@ -140,24 +140,24 @@ module WandoGrids
     fs
   end
 
-  #def wando_grid_for_array params, array
-  #  fields, column_name, result = [], [], []
+  def wando_grid_for_array params, array
+   fields, column_name, result = [], [], []
 
-  #  relations = JSON.parse(params[:columnsConfig])
-  #  relations.each do |o ,e|
-  #    fields << e
-  #    column_name << o
-  #  end
+   relations = JSON.parse(params[:columnsConfig])
+   relations.each do |o ,e|
+     fields << e
+     column_name << o
+   end
 
-  #  column_name.push("id")
-  #  records = array.provide(*column_name)
+   column_name.push("id")
+   records = array.provide(*column_name)
 
-  #  records.each do |r|
-  #    result << Hash[r.map {|k, v| [relations[k], v] }]
-  #  end
+   records.each do |r|
+     result << Hash[r.map {|k, v| [relations[k], v] }]
+   end
 
-  #  render :json => { :success => true, :total => array.count, :result => result }
+   render :json => { :success => true, :total => array.count, :result => result }
     
-  #end
+  end
   
 end
